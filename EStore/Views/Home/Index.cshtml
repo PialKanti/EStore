@@ -4,16 +4,19 @@
     ViewBag.Title = "Product List";
 }
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Price</th>
-    </tr>
+<div class="card-deck">
     @foreach (var product in Model)
-    { 
-        <tr>
-            <td>@product.Name</td>
-            <td>@product.Price</td>
-        </tr>
+    {
+        <div class="card m-1">
+            <div class="card-header">
+                <h3>@product.Name</h3>
+            </div>
+            <img class="card-img-top" src="~/images/demo_product.jpg" />
+            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">View</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
     }
-</table>
+</div>
