@@ -15,11 +15,9 @@ namespace EStore.Models
             {
                 new Product { Id = 1, Name = "Apple AirPods Pro", CategoryId = 1, Price = 25000},
                 new Product { Id = 2, Name = "Angels and demons", CategoryId = 2, Price = 2000},
-                new Product { Id = 1, Name = "Olaplex Hair Perfector No 3 Repairing Treatment", CategoryId = 3, Price = 3500},
-                new Product { Id = 1, Name = "Anne Klein Women's Genuine Diamond Dial Bangle Watch", CategoryId = 4, Price = 5000},
-                new Product { Id = 1, Name = "Nike Air Max", CategoryId = 5, Price = 12000},
-                new Product { Id = 1, Name = "Nike Air Max", CategoryId = 5, Price = 12000},
-                new Product { Id = 1, Name = "Nike Air Max", CategoryId = 5, Price = 12000}
+                new Product { Id = 3, Name = "Olaplex Hair Perfector No 3 Repairing Treatment", CategoryId = 3, Price = 3500},
+                new Product { Id = 4, Name = "Anne Klein Women's Genuine Diamond Dial Bangle Watch", CategoryId = 4, Price = 5000},
+                new Product { Id = 5, Name = "Nike Air Max", CategoryId = 5, Price = 12000}
             };
         }
 
