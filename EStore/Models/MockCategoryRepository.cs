@@ -25,5 +25,10 @@ namespace EStore.Models
         {
             return categoryList.FirstOrDefault(category => id == category.Id);
         }
+
+        public List<Category> GetAllCategory()
+        {
+            return categoryList;
+        }
     }
 }

@@ -30,5 +30,12 @@ namespace EStore.Models
         {
             return productList.FirstOrDefault(product => id == product.Id);
         }
+
+        public Product Create(Product product)
+        {
+            product.Id = productList.Max(p => p.Id) + 1;
+            productList.Add(product);
+            return product;
+        }
     }
 }

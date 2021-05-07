@@ -21,16 +21,5 @@ namespace EStore.Controllers
             List<Product> products = productRepository.GetAllProduct();
             return View(products);
         }
-
-        public ViewResult Details(int id)
-        {
-            ProductViewModel viewModel = new ProductViewModel
-            {
-                Product = productRepository.GetProduct(id)
-            };
-            viewModel.PageTitle = $"{viewModel.Product.Name} Details";
-
-            return View(viewModel);
-        }
     }
 }

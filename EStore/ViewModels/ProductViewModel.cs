@@ -8,7 +8,7 @@ namespace EStore.ViewModels
 {
     public class ProductViewModel
     {
-        public string PageTitle { get; set; }
         public Product Product { get; set; }
+        public List<Category> Categories { get; set; }
     }
 }

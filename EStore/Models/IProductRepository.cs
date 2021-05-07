@@ -9,5 +9,6 @@ namespace EStore.Models
     {
         Product GetProduct(int id);
         List<Product> GetAllProduct();
+        Product Create(Product product);
     }
 }

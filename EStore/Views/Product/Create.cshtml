@@ -1,0 +1,38 @@
+﻿@model ProductViewModel
+
+@{
+    ViewBag.Title = "Add product";
+}
+
+<form asp-controller="product" asp-action="create" method="post" class="container col-md-8">
+    <div class="form-group">
+        <label asp-for="Product.Name"></label>
+        <input asp-for="Product.Name" class="form-control" placeholder="Enter product name">
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Description"></label>
+        <textarea asp-for="Product.Description" class="form-control" rows="3" placeholder="Enter product description"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Price"></label>
+        <input asp-for="Product.Price" class="form-control" placeholder="Enter product price">
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.CategoryId">Category</label>
+        <select asp-for="Product.CategoryId" class="form-control">
+            <option selected>Choose...</option>
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.ImagePath">Image</label>
+        <div class="custom-file">
+            <input asp-for="Product.ImagePath" type="file" class="custom-file-input">
+            <label class="custom-file-label" for="customFile">Choose Product thumbnail</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

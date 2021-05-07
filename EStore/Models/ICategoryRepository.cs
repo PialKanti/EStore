@@ -8,5 +8,6 @@ namespace EStore.Models
     public interface ICategoryRepository
     {
         Category GetCategory(int id);
+        List<Category> GetAllCategory();
     }
 }
